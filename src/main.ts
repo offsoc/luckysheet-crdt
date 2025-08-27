@@ -50,7 +50,7 @@ async function initLuckysheet() {
 	};
 
 	// 是否开启协同模式
-	const isCollaboration = false;
+	const isCollaboration = true;
 	if (!isCollaboration) return luckysheet.create(options);
 
 	try {

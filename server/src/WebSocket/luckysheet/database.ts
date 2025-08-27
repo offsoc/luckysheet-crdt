@@ -127,15 +127,15 @@ async function v(data: string) {
 	}
 
 	// 场景一：单个单元格插入值（包括格式刷）
-    // {"t":"v","i":"e73f971d-606f-4b04-bcf1-98550940e8e3","v":{"v":"123","ct":{"fa":"General","t":"n"},"m":"123"},"r":5,"c":0}
-    else if (v && v.v && v.m) {
-        // 取 v m
-        const value = <string>v.v;
-        const monitor = <string>v.m;
-        
-        // 处理 ct 字段可能缺失的情况（格式刷时常见）
-        const ctfa = v.ct?.fa || 'General';
-        const ctt = v.ct?.t || 'n';
+	// {"t":"v","i":"e73f971d-606f-4b04-bcf1-98550940e8e3","v":{"v":"123","ct":{"fa":"General","t":"n"},"m":"123"},"r":5,"c":0}
+	else if (v && v.v && v.m) {
+		// 取 v m
+		const value = <string>v.v;
+		const monitor = <string>v.m;
+
+		// 处理 ct 字段可能缺失的情况（格式刷时常见）
+		const ctfa = v.ct?.fa || "General";
+		const ctt = v.ct?.t || "n";
 
 		// 判断表内是否存在当前记录
 		const exist = await CellDataService.hasCellData(i, r, c);
@@ -399,16 +399,28 @@ async function cg(data: string) {
 	// {"t":"cg","i":"e73f971d606...","v":[{"rangeType":"range","borderType":"border-all","color":"#000","style":"1","range":[{"row":[0,0],"column":[0,0],"row_focus":0,"column_focus":0,"left":0,"width":73,"top":0,"height":19,"left_move":0,"width_move":73,"top_move":0,"height_move":19}]}],"k":"borderInfo"}
 	// {"t":"cg","i":"e73f971d......","v":[{"rangeType":"range","borderType":"border-all","color":"#000","style":"1","range":[{"row":[2,7],"column":[1,2],"row_focus":2,"column_focus":1,"left":74,"width":73,"top":40,"height":19,"left_move":74,"width_move":147,"top_move":40,"height_move":119,}]}],"k":"borderInfo"}
 	// {"t":"cg","i":"e73f971d......","v":[{"rangeType":"range","borderType":"border-bottom","color":"#000","style":"1","range":[{"left":148,"width":73,"top":260,"height":19,"left_move":148,"width_move":73,"top_move":260,"height_move":19,"row":[13,13],"column":[2,2],"row_focus":13,"column_focus":2}]}],"k":"borderInfo"}
+
+	// 20250827 新增修复BUG：边框[无] 时，刷新异常BUG 导致该BUG的原因： 传入的数据类型，并非顺序的 all none
+	/**
+	 * { "rangeType": "range", "borderType": "border-all", "color": "#000", "range": [{ "row": [2, 14], "column": [3, 6] }] },
+	 * { "rangeType": "range", "borderType": "border-all", "color": "#000", "range": [{ "row": [8, 16], "column": [6, 8] }] },
+	 * { "rangeType": "range", "borderType": "border-none", "color": "#000", "range": [{ "row": [2, 14], "column": [3, 6] }] },
+	 * { "rangeType": "range", "borderType": "border-all", "color": "#000", "range": [{ "row": [2, 8], "column": [2, 4] }] },
+	 * { "rangeType": "range", "borderType": "border-none", "color": "#000", "range": [{ "row": [4, 13], "column": [5, 7] }] },
+	 * { "rangeType": "range", "borderType": "border-all", "color": "#000", "range": [{ "row": [4, 13], "column": [5, 7] }] },
+	 * { "rangeType": "range", "borderType": "border-none", "color": "#000", "range": [{ "row": [8, 16], "column": [6, 8] }] },
+	 * { "rangeType": "range", "borderType": "border-none", "color": "#000", "range": [{ "row": [2, 8], "column": [2, 4] }] },
+	 * { "rangeType": "range", "borderType": "border-none", "color": "#000", "range": [{ "row": [4, 13], "column": [5, 7] }] }
+	 */
 	if (k === "borderInfo") {
 		// 处理 rangeType
 		for (let idx = 0; idx < v.length; idx++) {
 			const border = v[idx];
 			const { rangeType, borderType, color, style, range } = border;
-			// 这里能拿到 i range 判断是否存在
-			// declare row_start?: number;
-			// declare row_end?: number;
-			// declare col_start?: number;
-			// declare col_end?: number;
+
+			// 用 i row column  及 borderType === 'border-none' 删除即可，需要添加 border-none 的记录
+			// 如果是其他的 borderType，添加的时候，都需要先检查是否存在 border-none,如果存在，则不处理
+
 			const info: BorderInfoModelType = {
 				worker_sheet_id: i,
 				rangeType,
@@ -467,9 +479,11 @@ async function all(data: string) {
 		// {"t":"all","i":"e73f971....","v":{"merge":{"1_0":{"r":1,"c":0,"rs":3,"cs":3},"9_1":{"r":9,"c":1,"rs":5,"cs":3}},},"k":"config"}
 		// {"t":"all","i":"e73f971....","v":{"merge":{"9_1":{"r":9,"c":1,"rs":5,"cs":3}},},"k":"config"}
 
+		// 如果当前 sheet 没有 merge 属性，则表示最后一个合并单元格被取消，则删除当前 sheetindex 下的所有 merge 记录
+		// 删除当前 sheet Index 下的所有merge 记录
+		await MergeService.deleteMerge(i);
+		// 如果有记录 再新增
 		if (Object.keys(v.merge).length) {
-			// 先删除
-			await MergeService.deleteMerge(i);
 			// 再新增
 			for (const key in v.merge) {
 				if (Object.prototype.hasOwnProperty.call(v.merge, key)) {

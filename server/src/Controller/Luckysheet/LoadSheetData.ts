@@ -16,11 +16,11 @@ import { MergeService } from "../../Service/Merge";
 import { ChartService } from "../../Service/Chart";
 import { CellDataService } from "../../Service/CellData";
 import { BorderInfoService } from "../../Service/Border";
+import { CalcChainService } from "../../Service/CalcChain";
 import { WorkerSheetService } from "../../Service/WorkerSheet";
 import { HiddenAndLenService } from "../../Service/HiddenAndLen";
 import { CellDataModelType } from "../../Sequelize/Models/CellData";
 import { WorkerSheetModelType } from "../../Sequelize/Models/WorkerSheet";
-import { CalcChainService } from "../../Service/CalcChain";
 
 /**
  * loadSheetData loadUrl 加载数据

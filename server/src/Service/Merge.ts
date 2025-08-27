@@ -11,15 +11,15 @@
  *  如果是创建新的合并单元格，需要判断 r c 是否存在，存在则更新 rs cs，不存在则插入
  */
 
-import { logger } from '../Utils/Logger';
-import { MergeModel, MergeModelType } from '../Sequelize/Models/Merge';
+import { logger } from "../Utils/Logger";
+import { MergeModel, MergeModelType } from "../Sequelize/Models/Merge";
 
 async function deleteMerge(worker_sheet_id: string) {
 	try {
 		return await MergeModel.destroy({
 			where: {
-				worker_sheet_id
-			}
+				worker_sheet_id,
+			},
 		});
 	} catch (error) {
 		logger.error(error);
@@ -41,7 +41,8 @@ async function createMerge(info: MergeModelType) {
 async function findAllMerge(worker_sheet_id: string) {
 	try {
 		return await MergeModel.findAll({
-			where: { worker_sheet_id }
+			where: { worker_sheet_id },
+			order: [["createdAt", "ASC"]],
 		});
 	} catch (error) {
 		logger.error(error);
@@ -52,5 +53,5 @@ async function findAllMerge(worker_sheet_id: string) {
 export const MergeService = {
 	deleteMerge,
 	createMerge,
-	findAllMerge
+	findAllMerge,
 };
