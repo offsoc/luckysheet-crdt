@@ -314,7 +314,9 @@ if (scripts[i].indexOf("http") === 0) {
 } else s[i].setAttribute("src", window.location.origin + "/" + scripts[i]);
 ```
 
-### 5️⃣ File Import
+### 5️⃣ File Import And File Export
+
+**File Import**
 
 <span style="font-weight:900">Support collaboration~</span>
 
@@ -339,7 +341,9 @@ luckysheet.create(options);
 2. Therefore, some functions are limited by plugins. If you need to expand them, please implement them yourself!
 3. Please configure plugins correctly Use the import function after `fileImport`.
 
-### 6️⃣ File Export
+---
+
+**File Export**
 
 <p align="center">
   <img src='/public/result/file-export.gif' />
@@ -362,7 +366,7 @@ luckysheet.create(options);
 2. Therefore, some functions are limited by plugins. If you need to expand them, please implement them yourself!
 3. Please configure plugins correctly Use the import function after `fileExport`.
 
-### 7️⃣ Customize Menu
+### 6️⃣ Customize Menu
 
 <span style="font-weight:900">Configuration:</span>
 
@@ -422,7 +426,7 @@ menuHandler: {
 
 3. Package and output to use iconfont icon normally
 
-### 8️⃣ Custom request header
+### 7️⃣ Custom request header
 
 Many people have reported that cookies, tokens, and other information should be added when requesting table data interfaces to verify user identity and permissions. This has been implemented and the specific configuration is as follows：
 
@@ -459,7 +463,7 @@ $.ajax({
 });
 ```
 
-### 9️⃣ Print
+### 8️⃣ Print
 
 **print perview**
 
@@ -495,6 +499,21 @@ $.ajax({
 
 <p align="center">
   <img src='/public/result/printChart.gif' />
+</p>
+
+### 9️⃣ Cell image`beta`
+
+**Add cell image display function**
+
+1. Support inserting floating images;
+2. Support inserting cell images;
+3. Support the conversion between floating images and cell images;
+4. Support configuring default image display mode `config. imageMode='foot '|'cell'`;
+5. Support cell image preview;
+6. Support adaptive merging of cell images.
+
+<p align="center">
+  <img src='/public/result/cellImage.gif' />
 </p>
 
 ### 🔟 Other source code optimizations

@@ -35,15 +35,32 @@
 						name: "vchart",
 					},
 				],
-				data: [sheetCell],
+				data: [sheetPicture],
 
 				// 自定义请求头
 				// requestHeaders: {
 				// 	"Custom-userid": "123",
 				// },
 
+				// 图片显示方式
+				imageMode: "cell", // 'cell' | 'float'
+
 				// 自定义右键菜单
 				cellRightClickConfig: {
+					// copy: false,
+					copyAs: false,
+					// paste: false,
+					hideColumn: false,
+					columnWidth: false,
+					clear: false,
+					matrix: false,
+					sort: false,
+					filter: false,
+					chart: false,
+					image: false,
+					link: false,
+					data: false,
+					cellFormat: false,
 					customs: [
 						{
 							title: "test",
@@ -133,9 +150,9 @@
 									"enable-pass-token": true, // 是否允许跳过 token 验证
 							  }
 							: {},
-					allowUpdate: true, // 配置协同功能
-					loadUrl: getLoadUrl(serviceServer, currentBranch, gridkey),
-					updateUrl: getUpdateUrl(collabrationServer, currentBranch, userid, username, gridkey), // 协同服务转发服务
+					// allowUpdate: true, // 配置协同功能
+					// loadUrl: getLoadUrl(serviceServer, currentBranch, gridkey),
+					// updateUrl: getUpdateUrl(collabrationServer, currentBranch, userid, username, gridkey), // 协同服务转发服务
 				});
 
 				// 6. 创建表格
