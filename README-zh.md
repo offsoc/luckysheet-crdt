@@ -313,8 +313,9 @@ if (scripts[i].indexOf("http") === 0) {
 } else s[i].setAttribute("src", window.location.origin + "/" + scripts[i]);
 ```
 
-### 5️⃣ 文件导入
+### 5️⃣ 文件导入|文件导出
 
+**文件导入**
 <span style="font-weight:900">支持协同~</span>
 
 <p align="center">
@@ -338,7 +339,9 @@ luckysheet.create(options);
 2. 故而有些功能受限于插件，如需拓展，请自行实现哈！
 3. 请正确配置 `plugins: [{ name: "fileImport" }]` 后使用导入功能。
 
-### 6️⃣ 文件导出
+---
+
+**文件导出**
 
 <p align="center">
   <img src='/public/result/file-export.gif' />
@@ -361,7 +364,7 @@ luckysheet.create(options);
 2. 故而有些功能受限于插件，如需拓展，请自行实现哈！
 3. 请正确配置 `plugins: [ { name: "fileExport" } ]` 后使用导入功能。
 
-### 7️⃣ 自定义菜单
+### 6️⃣ 自定义菜单
 
 <span style="font-weight:900">配置方法：</span>
 
@@ -421,7 +424,7 @@ menuHandler: {
 
 3. 打包输出即可正常使用 iconfont 图标
 
-### 8️⃣ 自定义请求头
+### 7️⃣ 自定义请求头
 
 很多人反映，应该在请求表格数据接口时，添加 cookies、token 等信息，以实现用户身份权限校验，目前已实现，具体配置如下：
 
@@ -458,7 +461,7 @@ $.ajax({
 });
 ```
 
-### 9️⃣ 打印相关
+### 8️⃣ 打印相关
 
 **打印预览视图**
 
@@ -494,6 +497,21 @@ $.ajax({
 
 <p align="center">
   <img src='/public/result/printChart.gif' />
+</p>
+
+### 9️⃣ 单元格图片`beta`
+
+**新增单元格图片显示功能**
+
+1. 支持插入浮动图片；
+2. 支持插入单元格图片；
+3. 支持浮动图片与单元格图片相互转换；
+4. 支持配置默认图片展示模式 `config.imageMode = 'float' | 'cell'`;
+5. 支持单元格图片预览；
+6. 支持单元格图片合并自适应。
+
+<p align="center">
+  <img src='/public/result/cellImage.gif' />
 </p>
 
 ### 🔟 其他源码优化
