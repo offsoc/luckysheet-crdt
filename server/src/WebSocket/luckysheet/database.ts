@@ -82,7 +82,7 @@ async function v(data: string) {
 	// 场景一 输入内容存在换行符，则内容是通过 s 传输
 	// {"t":"v","i":"28a60885-46e3-4f59-9d25-442a30fdbba6","v":{"ct":{"fa":"General","t":"inlineStr","s":[{"ff":"Times New Roman","fc":"#000000","fs":10,"cl":0,"un":0,"bl":0,"it":0,"v":"123\r\nhhh"}]}},"r":7,"c":0}
 	// {"t":"v","i":"28a60885-46e3-4f59-9d25-442a30fdbba6","v":{"ct":{"fa":"General","t":"inlineStr","s":[{"ff":"Times New Roman","fc":"#000000","fs":10,"cl":0,"un":0,"bl":0,"it":0,"v":"jasdjkasdh\r\n换行"}]}},"r":14,"c":1}
-	if (v && !v.v && v.ct && v.ct.s) {
+	if (v && !v.v && v.ct && v.ct.s && v.ct.s.length > 0) {
 		// 取 v m
 		const ctfa = v.ct.fa;
 		const ctt = v.ct.t;
