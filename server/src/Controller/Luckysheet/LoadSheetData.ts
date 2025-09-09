@@ -112,7 +112,7 @@ function getSheetDataTemp(item: WorkerSheetModelType) {
 			rowlen: {},
 			columnlen: {},
 		},
-		images: [], //图片
+		images: {}, //图片
 		chart: [], //图表配置
 		calcChain: [], // 公式链
 	};
@@ -306,15 +306,17 @@ async function parseHiddenAndLen(worker_sheet_id: string, currentSheetData: Work
  */
 async function parseImages(worker_sheet_id: string, currentSheetData: WorkerSheetItemType) {
 	try {
-		const result = <ImagesType[]>[];
+		const result = <{ [key: string]: ImagesType }>{};
 
 		const images = await ImageService.findAllImage(worker_sheet_id);
 
 		images?.forEach((image) => {
 			const data = image.dataValues;
-			result.push({
+			result[data.image_key] = {
 				type: data.image_type, //1移动并调整单元格大小 2移动并且不调整单元格的大小 3不要移动单元格并调整其大小
 				src: data.image_src, //图片url
+
+				inCell: data.in_cell || "", // 所在单元格位置
 				originWidth: data.image_originWidth,
 				originHeight: data.image_originHeight,
 				default: {
@@ -338,7 +340,7 @@ async function parseImages(worker_sheet_id: string, currentSheetData: WorkerShee
 					style: data.image_border_style,
 					color: data.image_border_color,
 				},
-			});
+			};
 		});
 		currentSheetData.images = result;
 

@@ -187,6 +187,7 @@ async function v(data: string) {
 			c,
 			v: "",
 			m: "",
+			f: v.f || "",
 			bg: v.bg,
 			bl: <boolean>v.bl,
 			cl: <boolean>v.cl,
@@ -216,12 +217,6 @@ async function v(data: string) {
 		await CellDataService.deleteCellData(i, r, c);
 	}
 
-	// 场景四： 删除单元格内容
-	// {"t":"v","i":"e73f971d-606f-4b04-bcf1-98550940e8e3","v":{"ct":{"fa":"General","t":"n"}},"r":5,"c":0}
-	else if (v && typeof v === "object" && !v.v && !v.m) {
-		await CellDataService.deleteCellData(i, r, c); // 删除记录
-	}
-
 	// 场景五：公式链操作时，会直接生成数值
 	// {"t":"v","i":"61f708fc-b159-4950-afab-176a81f4e1f6","v":6,"r":0,"c":2}
 	else if (v && typeof v === "number") {
@@ -236,6 +231,47 @@ async function v(data: string) {
 			v: v,
 			m: v,
 		});
+	}
+
+	// 场景六：单元格图片上设置
+	// {"t":"v","i":"3fc7f0b8-8fda-4e12-8a51-f2bad072b9c5","v":{"f":"=DISPIMG('img_onb00NooTrk6_1757387493023',1)"},"r":5,"c":3}
+	else if (v && v.f && v.f.startsWith("=DISPIMG(")) {
+		// 更新 r c 的f 值
+
+		// 处理 ct 字段可能缺失的情况（格式刷时常见）
+		const ctfa = v.ct?.fa || "General";
+		const ctt = v.ct?.t || "n";
+
+		// 判断表内是否存在当前记录
+		const exist = await CellDataService.hasCellData(i, r, c);
+
+		const info: CellDataModelType = {
+			worker_sheet_id: i,
+			r,
+			c,
+			f: v.f,
+			v: "",
+			m: "",
+			ctfa,
+			ctt,
+		};
+
+		// 如果存在则更新
+		if (exist) {
+			await CellDataService.updateCellData({
+				cell_data_id: exist.cell_data_id,
+				...info,
+			});
+		} else {
+			// 创建新的记录时，当前记录的 cell_data_id 由 sequelize 自动创建
+			await CellDataService.createCellData(info);
+		}
+	}
+
+	// 场景四： 删除单元格内容
+	// {"t":"v","i":"e73f971d-606f-4b04-bcf1-98550940e8e3","v":{"ct":{"fa":"General","t":"n"}},"r":5,"c":0}
+	else if (v && typeof v === "object" && !v.v && !v.m) {
+		await CellDataService.deleteCellData(i, r, c); // 删除记录
 	}
 }
 
@@ -531,9 +567,11 @@ async function all(data: string) {
 				const value = v[key];
 				// 解析 value 值
 				await ImageService.createImage({
+					image_key: key,
 					worker_sheet_id: i,
 					image_type: value.type, // type 1移动并调整单元格大小 2移动并且不调整单元格的大小 3不要移动单元格并调整其大小
 					image_src: value.src, // 图片地址
+					in_cell: value.inCell || "", // 所在单元格位置
 					image_originWidth: value.originWidth, // 原始宽度
 					image_originHeight: value.originHeight, // 原始高度
 					image_default_width: value.default.width, // 默认宽度

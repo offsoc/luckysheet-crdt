@@ -11,6 +11,10 @@ export class ImageModel extends Model {
 	declare image_type: string; // type 1移动并调整单元格大小 2移动并且不调整单元格的大小 3不要移动单元格并调整其大小
 	declare image_src: string; // 图片地址
 
+	declare image_key: string; // 图片唯一标识
+
+	declare in_cell?: string; // 是否在单元格内
+
 	declare image_originWidth: number; // 原始宽度
 	declare image_originHeight: number; // 原始高度
 
@@ -61,6 +65,16 @@ export class ImageModel extends Model {
 					type: DataTypes.STRING,
 					allowNull: false,
 					comment: "图片地址",
+				},
+				in_cell: {
+					type: DataTypes.STRING,
+					allowNull: false,
+					comment: "单元格图片标识",
+				},
+				image_key: {
+					type: DataTypes.STRING,
+					allowNull: false,
+					comment: "图表标识",
 				},
 				image_originWidth: {
 					type: DataTypes.INTEGER,
