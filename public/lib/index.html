@@ -208,14 +208,14 @@
 				const gridkey = "705abf334c946bf5545ce04f586eb42e";
 
 				// 7. 明确是否需要协同功能
-				const isCollabration = true;
+				const isCollabration = false;
 
-				// 是否需要携带其他 request headers
+				// 8. 是否需要携带其他 request headers
 				const requestHeaders = {
 					// "Custom-userid": userid,
 				};
 
-				// 8. 根据是否需要协同功能，动态获取配置项
+				// 9. 根据是否需要协同功能，动态获取配置项
 				const options = getOptions(
 					isCollabration,
 					requestHeaders,
@@ -227,7 +227,7 @@
 					gridkey
 				);
 
-				// 9. 创建表格
+				// 10. 创建表格
 				luckysheet.create(options);
 			});
 		</script>
