@@ -31,7 +31,7 @@ type WorkerSheetItemType = {
 		// authority: AuthorityType; //工作表保护
 	};
 	chart: ChartType[]; //图表配置
-	images: ImagesType[]; //图片
+	images: { [key: string]: ImagesType }; //图片
 	calcChain: CalcChainType[]; //公式链
 
 	/**
@@ -188,6 +188,7 @@ type ImagesType = {
 	src: string;
 	originWidth: number;
 	originHeight: number;
+	inCell: string;
 	default: {
 		width: number;
 		height: number;
