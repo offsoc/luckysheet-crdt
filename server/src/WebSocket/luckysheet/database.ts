@@ -519,7 +519,7 @@ async function all(data: string) {
 		// 删除当前 sheet Index 下的所有merge 记录
 		await MergeService.deleteMerge(i);
 		// 如果有记录 再新增
-		if (Object.keys(v.merge).length) {
+		if (v && v.merge && Object.keys(v.merge).length) {
 			// 再新增
 			for (const key in v.merge) {
 				if (Object.prototype.hasOwnProperty.call(v.merge, key)) {
@@ -537,7 +537,7 @@ async function all(data: string) {
 
 		// 文本换行处理方式 - 自动换行是通过自定义行高实现的，这部分也需要存储哈
 		// {"t":"all","i":"28a60885-46e3-4f59-9d25-442a30fdbba6","v":{"merge":{},"rowhidden":{},"colhidden":{},"borderInfo":[],"rowlen":{"10":63.5},"columnlen":{},"customHeight":{}},"k":"config"}
-		if (Object.keys(v.rowlen).length) {
+		if (v && v.rowlen && Object.keys(v.rowlen).length) {
 			// "rowlen":{"10":63.5},
 			for (const key in v.rowlen) {
 				if (Object.prototype.hasOwnProperty.call(v.rowlen, key)) {
