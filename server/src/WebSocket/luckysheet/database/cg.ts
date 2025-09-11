@@ -21,11 +21,17 @@ export async function cg(data: string) {
 
 	// 修改行高列宽
 	// {"t":"cg","i":"e73f971d-606f-4b04-bcf1-98550940e8e3","v":{"4":100},"k":"rowlen"}
+
+	// 取消隐藏行
+	// {"t":"cg","i":"Sheet_13073il53h5h_1757404832048","v":{},"k":"colhidden"}
+
 	if (k === "rowhidden" || k === "colhidden" || k === "rowlen" || k === "columnlen") {
+		// 因为前台发送的全量数据，因此，每次执行，都需要先删除后添加
+		//  {"t":"cg","i":"e73f971d-606f-4b04-bcf1-98550940e8e3","v":{"7":0,"8":0,"9":0},"k":"rowhidden"}
+		//  {"t":"cg","i":"e73f971d-606f-4b04-bcf1-98550940e8e3","v":{},"k":"rowhidden"}
+		await HiddenAndLenService.deleteHidden(i, k);
 		for (const key in v) {
 			if (Object.prototype.hasOwnProperty.call(v, key)) {
-				// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-				// @ts-ignore
 				const value = Number(v[key]);
 				// 判断具体是 行还是列
 				const configInfo: HiddenAndLenModelType = {
@@ -34,18 +40,13 @@ export async function cg(data: string) {
 					config_type: k,
 					config_value: value,
 				};
-				//  {"t":"cg","i":"e73f971d-606f-4b04-bcf1-98550940e8e3","v":{"7":0,"8":0,"9":0},"k":"rowhidden"}
-				//  {"t":"cg","i":"e73f971d-606f-4b04-bcf1-98550940e8e3","v":{},"k":"rowhidden"}
-				// 如果是隐藏的状态，应该先删除全部的 configInfo 再创建，因为 luckysheet 前台的设计就是将当前所有的 hidden 全部传给后台，并不区分是隐藏还是取消隐藏
-				if (k === "rowhidden" || k === "colhidden") {
-					await HiddenAndLenService.deleteHidden(i, k, key);
-				}
+
 				await HiddenAndLenService.create(configInfo);
 			}
 		}
 	}
 
-	// k borderInfo 边框处理
+	// 场景三: k borderInfo 边框处理
 	// {"t":"cg","i":"e73f971d606...","v":[{"rangeType":"range","borderType":"border-all","color":"#000","style":"1","range":[{"row":[0,0],"column":[0,0],"row_focus":0,"column_focus":0,"left":0,"width":73,"top":0,"height":19,"left_move":0,"width_move":73,"top_move":0,"height_move":19}]}],"k":"borderInfo"}
 	// {"t":"cg","i":"e73f971d......","v":[{"rangeType":"range","borderType":"border-all","color":"#000","style":"1","range":[{"row":[2,7],"column":[1,2],"row_focus":2,"column_focus":1,"left":74,"width":73,"top":40,"height":19,"left_move":74,"width_move":147,"top_move":40,"height_move":119,}]}],"k":"borderInfo"}
 	// {"t":"cg","i":"e73f971d......","v":[{"rangeType":"range","borderType":"border-bottom","color":"#000","style":"1","range":[{"left":148,"width":73,"top":260,"height":19,"left_move":148,"width_move":73,"top_move":260,"height_move":19,"row":[13,13],"column":[2,2],"row_focus":13,"column_focus":2}]}],"k":"borderInfo"}
@@ -62,7 +63,7 @@ export async function cg(data: string) {
 	 * { "rangeType": "range", "borderType": "border-none", "color": "#000", "range": [{ "row": [2, 8], "column": [2, 4] }] },
 	 * { "rangeType": "range", "borderType": "border-none", "color": "#000", "range": [{ "row": [4, 13], "column": [5, 7] }] }
 	 */
-	if (k === "borderInfo") {
+	else if (k === "borderInfo") {
 		// 处理 rangeType
 		for (let idx = 0; idx < v.length; idx++) {
 			const border = v[idx];
