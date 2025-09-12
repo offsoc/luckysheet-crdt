@@ -64,7 +64,7 @@ export async function v(data: string) {
 
 	// 场景一：单个单元格插入值（包括格式刷）
 	// {"t":"v","i":"e73f971d-606f-4b04-bcf1-98550940e8e3","v":{"v":"123","ct":{"fa":"General","t":"n"},"m":"123"},"r":5,"c":0}
-	else if (v && v.v && v.m) {
+	else if (v && !isEmpty(v.v) && !isEmpty(v.m)) {
 		// 取 v m
 		const value = <string>v.v;
 		const monitor = <string>v.m;
