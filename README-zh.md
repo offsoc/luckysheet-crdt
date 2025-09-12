@@ -424,6 +424,29 @@ menuHandler: {
 
 3. 打包输出即可正常使用 iconfont 图标
 
+---
+
+**显示 Logo**
+
+<p align="center">
+  <img src='/public/result/showlogo.png' />
+</p>
+
+**隐藏 Logo**
+
+<p align="center">
+  <img src='/public/result/hidelogo.png' />
+</p>
+
+**配置方法：**
+
+```js
+const options = {
+	showlogo: false,
+	/// ...other config
+};
+```
+
 ### 7️⃣ 自定义请求头
 
 很多人反映，应该在请求表格数据接口时，添加 cookies、token 等信息，以实现用户身份权限校验，目前已实现，具体配置如下：
