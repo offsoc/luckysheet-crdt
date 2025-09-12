@@ -426,6 +426,29 @@ menuHandler: {
 
 3. Package and output to use iconfont icon normally
 
+---
+
+**show Logo**
+
+<p align="center">
+  <img src='/public/result/showlogo.png' />
+</p>
+
+**hide Logo**
+
+<p align="center">
+  <img src='/public/result/hidelogo.png' />
+</p>
+
+**Configuration:**
+
+```js
+const options = {
+	showlogo: false,
+	/// ...other config
+};
+```
+
 ### 7️⃣ Custom request header
 
 Many people have reported that cookies, tokens, and other information should be added when requesting table data interfaces to verify user identity and permissions. This has been implemented and the specific configuration is as follows：
