@@ -35,6 +35,7 @@ async function initLuckysheet() {
 		title: "Luckysheet",
 		container: "luckysheetContainer",
 		// showinfobar: false, // 隐藏顶部的信息栏
+		// showlogo: false, // 隐藏顶部的 logo
 		allowUpdate: false, // 配置协同功能
 		loadUrl: "",
 		updateUrl: "", // 协同服务转发服务
