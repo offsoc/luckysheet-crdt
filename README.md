@@ -28,27 +28,28 @@
 1. This project is based on [Luckysheet](https://github.com/mengshukeji/Luckysheet) source code. **Please follow the original author's open source agreement** and do not remove or modify the copyright notice in the source code header.
 2. This project is open-sourced under the **Apache 2.0 license**. Feel free to use it. The project also contributes to the Luckysheet community, enriching its ecosystem. Thanks again to the @[Luckysheet](https://github.com/mengshukeji/Luckysheet) team ❤️
 3. This is a **Luckysheet Collaborative Enhanced Edition (with full functionality)** designed to provide ideas for collaborative implementation, data storage services, and collaborative demonstrations. The project is based on [Luckysheet](https://github.com/mengshukeji/Luckysheet). Thanks to the original author for open-sourcing it.
-4. This project mainly implements collaborative functionality. Modifications to the source code are all located in the `luckysheet-source-private` directory.
-5. The project supports **optional database services**. Without a database, user data cannot be persisted, but collaborative functionality is not affected. **⚠️Only valid for `master` and `master-alpha` branches. `master-vue` requires database functionality for user system implementation**.
-6. The project uses **[Sequelize](https://www.sequelize.cn/)** as ORM data service technology, supporting databases such as MySQL, SQLite, PostgreSQL, and MSSQL for easy migration.
-7. The project uses **TypeScript** as the main development language, providing complete type hints, standardized code, and improved development efficiency.
-8. Personal capacity is limited, and there may be bugs or incomplete features. Please submit an [issue](https://gitee.com/wfeng0/luckysheet-crdt/issues/new), and I will handle it promptly.
-9. Everyone is welcome to fork the project and submit PRs to improve it together.
+4. The project supports **optional database services**. Without a database, user data cannot be persisted, but collaborative functionality is not affected. **⚠️Only valid for `master` and `master-alpha` branches. `master-vue` requires database functionality for user system implementation**.
+5. The project uses **[Sequelize](https://www.sequelize.cn/)** as ORM data service technology, supporting databases such as MySQL, SQLite, PostgreSQL, and MSSQL for easy migration.
+6. The project uses **TypeScript** as the main development language, providing complete type hints, standardized code, and improved development efficiency.
+7. Personal capacity is limited, and there may be bugs or incomplete features. Please submit an [issue](https://gitee.com/wfeng0/luckysheet-crdt/issues/new), and I will handle it promptly.
+8. Everyone is welcome to fork the project and submit PRs to improve it together.
 
 ## Pricing Statement
 
-1. Please note that the startup, operation, and deployment of this project **does not require Luckysheet source code and does not affect collaborative functionality**.
-2. To better promote open source, starting from `2025-04-15` commit `e12d2f4850127f53292a5161445fc500593176b9`, **the modified source code will no longer be provided. If needed, please contact the author for a fee**.
-3. **The lack of Luckysheet source code does not affect actual functionality. All collaborative features are open source**.
-4. **Impact of not having source code**:
-    1. Source code is only used for expansion in secondary development scenarios
-    2. If you don't need secondary development, you don't need the source code. If you do, please contact the author for paid access first
-5. **Please note**:
-    1. Enhanced frontend and server-side code are both open source. Not having source code does not affect functionality
-    2. Price: **`99 yuan`**
-    3. Service provided: Source code package only (no continuous feature upgrades, bug fixes, or product purchase!)
-6. **Contact the author**:
-    1. QQ Group: 522121825 (recommended)
+In order to better drive the development of open source, starting from version `E12d2f4850127f53292a5161445fc500593176b9` on `April 15, 2025`, the project will no longer provide the Luckysheet source code modification section. If you need the source code for secondary development, please contact the author to pay for it.
+
+Please note that the front-end and back-end functions of Luckysheet CRDT are completely open source and can be used normally without relying on source code. Source code is not required for project startup, operation, deployment, and other stages.
+
+The source code is mainly used for functional expansion in secondary development scenarios:
+
+-   If you only use existing collaborative editing features, **no need to obtain source code**
+-   If you need secondary development to meet specific requirements, **please contact the author to pay for the source code**
+
+**Service Details**
+
+-   **Pricing**：**`199 yuan`**
+-   **Service Content**：Only provide source code package (does not include continuous feature upgrades, bug fixes, and does not equate to product purchase)
+-   **Contact Information**：QQ Group: `522121825`(Recommended)| Email: `<1982392655@qq.com>`(Recommended)
 
 ## Getting Started
 
@@ -74,6 +75,8 @@ npm run dep-npm | npm run dep-pnpm
 2. We recommend using `pnpm install` to install dependencies and avoid version conflicts
 3. If dependency download fails, try deleting the `package-lock.json` file and re-installing dependencies
 4. If the `npm run dep-npm` command fails, try executing `npm install --s` for frontend dependencies and `cd server && npm install --s` for backend dependencies
+
+---
 
 **If errors persist, confirm that your environment meets the requirements**:
 `node -v ==> v20.x.x` // Node version must be greater than 18
@@ -182,15 +185,11 @@ export const WS_SERVER_URL = "ws://127.0.0.1:9000";
 
 ### 1️⃣ UI Refactoring
 
-UI refactoring, see [Luckysheet-source-recover-style](/Luckysheet-source/src/css/recover.css)
-
 <p align="center">
   <img src='/public/result/ui.gif' alt="UI Refactoring" />
 </p>
 
 ### 2️⃣ Chart Collaboration
-
-Implemented vchart, see [Luckysheet-source-vchart](/Luckysheet-source/src/expendPlugins/vchart/plugin.js)
 
 <span style="font-weight:900">Left is `vchart` rendering, right is `chartmix` rendering</span>
 
@@ -209,8 +208,6 @@ Implemented vchart, see [Luckysheet-source-vchart](/Luckysheet-source/src/expend
 <p align="center">
   <img src='/public/result/vchart-setting.gif' alt="VChart settings" />
 </p>
-
-2. Implemented chart data update linkage:
 
 <span style="font-weight:900">ChartMix data linkage</span>
 
