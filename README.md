@@ -1,5 +1,5 @@
 <p align="center">
-  <img src='/public/logo.svg' />
+  <img src='/public/logo.svg' alt="Luckysheet CRDT Logo" />
 </p>
 
 <h1 align="center">Luckysheet CRDT</h1>
@@ -7,80 +7,80 @@
 [简体中文](./README-zh.md) | English
 
 <p align="center">
-  <img src='/public/result/result.gif' alt='result' />
+  <img src='/public/result/result.gif' alt='Demonstration of collaborative editing' />
 </p>
 
 ---
 
-**Project branches:**
+## Project Branches
 
--   `Master`: Stable version, providing optional database services and complete functionality implementation;
--   `Master alpha`: Development version, providing optional database services and complete functionality implementation;
--   `Master Vue`: Stable version, providing user system, file system, complete functional implementation, relying on database services;
+-   `master`: Stable version with optional database services and complete functionality
+-   `master-alpha`: Development version with optional database services and complete functionality
+-   `master-vue`: Stable version with user system, file system, and database dependency
 
-**Warehouse address:**
+## Repository
 
 -   `Gitee`: [https://gitee.com/wfeng0/luckysheet-crdt](https://gitee.com/wfeng0/luckysheet-crdt)
 -   `GitHub`: [https://github.com/pushu-wf/luckysheet-crdt](https://github.com/pushu-wf/luckysheet-crdt)
 
-## DESCRIPTION
+## Overview
 
-1. This project is based on the [Luckysheet source code](https://github.com/mengshukeji/Luckysheet) modification. Please follow the original author's open source agreement, and do not delete or modify the source code header copyright statement。
-2. This project is open sourced under the **Apache 2.0 protocol**, so please feel free to use it. At the same time, this project will also contribute to the Luksysheet community, enriching the community ecosystem. Thank you again to the @[Luckysheet](https://github.com/mengshukeji/Luckysheet) team ❤️
-3. The project is **Luckysheet Collaborative Enhanced Edition (fully functional implementation)**, aiming to provide collaborative implementation ideas, data storage services, collaborative demonstrations, etc. The project is based on [Luckysheet](https://github.com/mengshukeji/Luckysheet) Implemented, thank you to the original author for open-source.
-4. This project mainly implements the collaborative function module, which has no impact on other content. The parts modified based on the source code are all reflected in the `Luckysheet source` folder.
-5. The project supports **optional database services**. User data without a database cannot be persistently stored, and collaborative functionality is not affected，**⚠️Only valid for `master and master-alpha` branches, `master-vue` relies on database functionality to implement user systems**.
-6. Project Use **[Sequelize](https://www.sequelize.cn/)** As an ORM data service technology, it supports databases such as MySQL, SQLite, PostgreSQL, and MSSQL, making it easy for users to quickly migrate.
-7. The project uses **Typescript** as the main development language, providing complete type prompts, standardizing code, and improving development efficiency.
-8. My personal energy is limited, and there are bugs and incomplete functions. Please submit an [issue](https://gitee.com/wfeng0/luckysheet-crdt/issues/new) and I will handle it promptly;
-9. Welcome everyone to fork the project, submit PR, and work together to improve the project.
+1. This project is based on [Luckysheet](https://github.com/mengshukeji/Luckysheet) source code. **Please follow the original author's open source agreement** and do not remove or modify the copyright notice in the source code header.
+2. This project is open-sourced under the **Apache 2.0 license**. Feel free to use it. The project also contributes to the Luckysheet community, enriching its ecosystem. Thanks again to the @[Luckysheet](https://github.com/mengshukeji/Luckysheet) team ❤️
+3. This is a **Luckysheet Collaborative Enhanced Edition (with full functionality)** designed to provide ideas for collaborative implementation, data storage services, and collaborative demonstrations. The project is based on [Luckysheet](https://github.com/mengshukeji/Luckysheet). Thanks to the original author for open-sourcing it.
+4. This project mainly implements collaborative functionality. Modifications to the source code are all located in the `luckysheet-source-private` directory.
+5. The project supports **optional database services**. Without a database, user data cannot be persisted, but collaborative functionality is not affected. **⚠️Only valid for `master` and `master-alpha` branches. `master-vue` requires database functionality for user system implementation**.
+6. The project uses **[Sequelize](https://www.sequelize.cn/)** as ORM data service technology, supporting databases such as MySQL, SQLite, PostgreSQL, and MSSQL for easy migration.
+7. The project uses **TypeScript** as the main development language, providing complete type hints, standardized code, and improved development efficiency.
+8. Personal capacity is limited, and there may be bugs or incomplete features. Please submit an [issue](https://gitee.com/wfeng0/luckysheet-crdt/issues/new), and I will handle it promptly.
+9. Everyone is welcome to fork the project and submit PRs to improve it together.
 
-## Fee Statement
+## Pricing Statement
 
-1. Please note that there is no Luckymeet source code available for the startup, operation, deployment, and other stages of this project, which does not affect the actual collaborative functionality。
-2. In order to better drive open source, starting from `2025-04-15` the git head of `e12d2f4850127f53292a5161445fc500593176b9`, the source code modification part will no longer be provided. If necessary, please contact the author for a fee to obtain it。
-3. **The lack of Luckysheet source code does not affect the actual functionality, and all collaborative features are open source**。
-4. **The impact of no source code:**
-    1. The source code is only used for functional expansion in binary scenarios;
-    2. If there is no requirement for secondary opening, you do not need to use the source code. If there is a requirement for secondary opening, please contact the author for payment first；
-5. **Please note that:**
-    1. The enhanced front-end code and server-side code are both open source, and the lack of source code does not affect the functionality and usage；
-    2. Fee standard:**`￥ 99`**
-    3. Provide services: Only provide source code packages (do not provide continuous feature upgrades, bug fixes, and not purchase products!)
-6. **Contact Author**：
-    1. qq 群: 522121825 (recommend)
+1. Please note that the startup, operation, and deployment of this project **does not require Luckysheet source code and does not affect collaborative functionality**.
+2. To better promote open source, starting from `2025-04-15` commit `e12d2f4850127f53292a5161445fc500593176b9`, **the modified source code will no longer be provided. If needed, please contact the author for a fee**.
+3. **The lack of Luckysheet source code does not affect actual functionality. All collaborative features are open source**.
+4. **Impact of not having source code**:
+    1. Source code is only used for expansion in secondary development scenarios
+    2. If you don't need secondary development, you don't need the source code. If you do, please contact the author for paid access first
+5. **Please note**:
+    1. Enhanced frontend and server-side code are both open source. Not having source code does not affect functionality
+    2. Price: **`99 yuan`**
+    3. Service provided: Source code package only (no continuous feature upgrades, bug fixes, or product purchase!)
+6. **Contact the author**:
+    1. QQ Group: 522121825 (recommended)
 
-## START
+## Getting Started
 
-1. Clone project：
+1. Clone the project:
 
 ```bash
 git clone https://gitee.com/wfeng0/luckysheet-crdt
 ```
 
-2. Download dependencies:
+2. Install dependencies:
 
 ```bash
 # "dep-npm": "npm install --s && cd server && npm install --s",
 # "dep-pnpm": "pnpm install --s && cd server && pnpm install --s"
 npm run dep-npm | npm run dep-pnpm
-# Recommend using pnpm for dependency installation to avoid version conflicts
+# Recommended to use pnpm for dependency installation to avoid version conflicts
 ```
 
-**⛔️ Tips：**
+**⛔️ Tips**:
 
 ```js
-1. Project dependencies are divided into front-end dependencies and back-end dependencies (independent projects)；
-2. We recommend using `pnpm install` to install dependencies and avoid version conflicts；
-3. If the dependency download error occurs, you can try deleting the `package lock. json` file and re executing the dependency installation;
-4. If executing the command 'npm run dep-npm' reports an error，Please try executing the 'npm install -- s' command for front-end dependency installation，Execute the 'cd server && npm install -- s' command for background dependency installation。
+1. Project dependencies are divided into frontend and backend dependencies (separate projects)
+2. We recommend using `pnpm install` to install dependencies and avoid version conflicts
+3. If dependency download fails, try deleting the `package-lock.json` file and re-installing dependencies
+4. If the `npm run dep-npm` command fails, try executing `npm install --s` for frontend dependencies and `cd server && npm install --s` for backend dependencies
 
-**If the error persists, please confirm if the environment meets the operating conditions：**
-`node -v ==> v20.x.x` // 请确保 node 版本大于 18
-`npm -v ==> 10.x.x` // 请确保 npm 版本大于 7.x.x
+**If errors persist, confirm that your environment meets the requirements**:
+`node -v ==> v20.x.x` // Node version must be greater than 18
+`npm -v ==> 10.x.x` // NPM version must be greater than 7.x.x
 ```
 
-3. 🚫<span style="color:red;font-weight:900">~~If there is no database service, please skip this step~~</span>🚫 Configure database parameters：
+3. 🚫<span style="color:red;font-weight:900">~~Skip this step if you don't have database services~~</span>🚫 Configure database parameters:
 
 ```ts
 // server/src/Config/index.ts
@@ -93,76 +93,76 @@ export const SQL_CONFIG = {
 };
 ```
 
-4. 🚫<span style="color:red;font-weight:900">~~If there is no database service, please skip this step~~</span>🚫 Synchronize database tables：
+4. 🚫<span style="color:red;font-weight:900">~~Skip this step if you don't have database services~~</span>🚫 Synchronize database tables:
 
 ```bash
 npm run db
 ```
 
-**⛔️ Tips：**
+**⛔️ Tips**:
 
 ```ts
-1.  Please ensure that the database configuration is correct and available
-2.  Please ensure that the project executes synchronized database commands `npm run db`
-3.  The project cycle only needs to be executed once to ensure the existence of table structures in the database。
+1. Ensure database configuration is correct and available
+2. Ensure the project executes the database sync command `npm run db`
+3. This only needs to be executed once in the project lifecycle to ensure table structures exist in the database
 ```
 
-1. Start Service:
-    - Front-desk service：`npm run dev`
-    - Back-up services：`npm run server`
-2. Open the URL：`http://localhost:5000` | `http://localhost:9000`, You can experience the collaborative function.
+5. Start services:
+    - Frontend service: `npm run dev`
+    - Backend service: `npm run server`
+6. Open URL: `http://localhost:5000` | `http://localhost:9000` to experience collaborative functionality.
 
-## Project Deployment
+## Deployment
 
-**Kind reminder: All the following commands are executed in the project root directory/LUCKYSHEET-CRDT/**
+**Note: All the following commands are executed in the project root directory `/LUCKYSHEET-CRDT/`**
 
-1. **Notice!** Please modify the deployed configuration file: ` src/config/index. ts`:
+1. **Important!** Modify the deployment configuration file: `src/config/index.ts`:
 
 ```ts
-// Change the backend address to the server IP address
+// Change backend address to server IP address
 export const SERVER_URL = "http://localhost:9000";
 
-// Change the collaborative address to the server IP address
+// Change collaborative address to server IP address
 export const WS_SERVER_URL = "ws://127.0.0.1:9000";
 ```
 
-2.  Pack the front-end project first: `npm run build`
+2. Build the frontend project first: `npm run build`
 
-    -   Please note that when packaging file files, the default output is to `server/public/dist`
+    - Note that packaged files are output to `server/public/dist` by default
 
-3.  Package server code: `npm run build:server`
+3. Package server code: `npm run build:server`
 
-    -   At this point, the packaging result of the entire project will be directly output to the `server/wwwroot` directory, which can be deployed directly to the server。
+    - At this point, the entire project's packaging result will be output directly to the `server/wwwroot` directory, which can be deployed directly to the server
 
-4.  Please upload the files from the 'server/wwwroot' directory to the server
-<p align="center">
-  <img src='/public/result/build.png' />
-</p>
+4. Upload the files in the `server/wwwroot` directory to the server
+ <p align="center">
+   <img src='/public/result/build.png' alt="Build output directory" />
+ </p>
 
-5.  Install the 'node' environment on the server. You can search for related tutorials online by yourself
+5. Install `node` environment on the server. You can search for related tutorials online
 
-    -   This example provides:[centos 参考此链接](https://blog.csdn.net/weixin_61367575/article/details/138012405)
+    - Example provided: [centos reference this link](https://blog.csdn.net/weixin_61367575/article/details/138012405)
 
-6.  Synchronize database tables:`npm run db`
+6. Synchronize database tables: `npm run db`
 
-    -   Please ensure that the database configuration is correct and available(~~If there is no database service, please skip this step~~)
+    - Ensure database configuration is correct and available (~~Skip this step if you don't have database services~~)
 
-7.  Start service:`npm run start`: **This command is only valid in the wwwroot folder after packaging**
-    -   Wait for dependency download to complete, start service `npm run start`, Access after deployment completion to just access `http://${ip}:9000`
+7. Start service: `npm run start`: **This command is only valid in the packaged wwwroot folder**
+    - Wait for dependency download to complete, then start service with `npm run start`. After deployment, access `http://${ip}:9000`
 
-## Service Port Description
+## Service Ports
 
-1. Front desk service port：`5000`
-2. Back up service port：`9000`
-3. Database service port：`3306`
+1. Frontend service port: `5000`
+2. Backend service port: `9000`
+3. Database service port: `3306`
 
 ```js
-// 1️⃣ Backend service port configuration：server/src/Config/index.ts
+// 1️⃣ Backend service port configuration: server/src/Config/index.ts
 export const SERVER_PORT = 9000;
 ```
 
 ```js
-// 2️⃣ Database service port configuration：server/src/Config/index.ts
+// 2️⃣ Database service port configuration: server/src/Config/index.ts
 export const SQL_CONFIG = {
 	port: 3306,
 	// ... other config
@@ -170,7 +170,7 @@ export const SQL_CONFIG = {
 ```
 
 ```js
-// 3️⃣ Front desk service port configuration：src/config/index.ts
+// 3️⃣ Frontend service port configuration: src/config/index.ts
 // Export backend service address
 export const SERVER_URL = "http://localhost:9000";
 
@@ -178,81 +178,81 @@ export const SERVER_URL = "http://localhost:9000";
 export const WS_SERVER_URL = "ws://127.0.0.1:9000";
 ```
 
-## Source project optimization
+## Source Project Optimizations
 
-### 1️⃣ Page UI Refactoring
+### 1️⃣ UI Refactoring
 
-1. Source code UI refactoring, please refer to [Luckysheet-source-recover-style](/Luckysheet-source/src/css/recover.css)
+UI refactoring, see [Luckysheet-source-recover-style](/Luckysheet-source/src/css/recover.css)
 
 <p align="center">
-  <img src='/public/result/ui.gif' />
+  <img src='/public/result/ui.gif' alt="UI Refactoring" />
 </p>
 
 ### 2️⃣ Chart Collaboration
 
-1. Implemented vchart, please refer to [Luckysheet-source-vchart](/Luckysheet-source/src/expendPlugins/vchart/plugin.js)
+Implemented vchart, see [Luckysheet-source-vchart](/Luckysheet-source/src/expendPlugins/vchart/plugin.js)
 
-<span style="font-weight:900">On the left is' vchart 'rendering, and on the right is' chartmix' rendering</span>
-
-<p align="center">
-  <img src='/public/result/chartmix-vchart.png' />
-</p>
-
-<span style="font-weight:900">The vchart chart animation is smoother, and the page is concise and beautiful</span>
+<span style="font-weight:900">Left is `vchart` rendering, right is `chartmix` rendering</span>
 
 <p align="center">
-  <img src='/public/result/vchart.gif' />
+  <img src='/public/result/chartmix-vchart.png' alt="VChart vs ChartMix" />
 </p>
 
-<span style="font-weight:900">vchart setting</span>
+<span style="font-weight:900">VChart animations are smoother and the page is more concise and beautiful</span>
 
 <p align="center">
-  <img src='/public/result/vchart-setting.gif' />
+  <img src='/public/result/vchart.gif' alt="VChart animation" />
 </p>
 
-2. Expand the implementation of chart data update linkage:
-
-<span style="font-weight:900">chartmix </span>
+<span style="font-weight:900">VChart settings</span>
 
 <p align="center">
-  <img src='/public/result/chartmix-update-data-crdt.gif' />
+  <img src='/public/result/vchart-setting.gif' alt="VChart settings" />
 </p>
 
-<span style="font-weight:900">vchart </span>
+2. Implemented chart data update linkage:
+
+<span style="font-weight:900">ChartMix data linkage</span>
 
 <p align="center">
-  <img src='/public/result/vchart-update-data-crdt.gif' />
+  <img src='/public/result/chartmix-update-data-crdt.gif' alt="ChartMix data linkage" />
 </p>
 
-### 3️⃣ Optimization of image mobility performance
+<span style="font-weight:900">VChart data linkage</span>
+
+<p align="center">
+  <img src='/public/result/vchart-update-data-crdt.gif' alt="VChart data linkage" />
+</p>
+
+### 3️⃣ Image Performance Optimization
 
 <span style="font-weight:900">Original effect:</span>
 
 <p align="center">
-  <img src='/public/result/picture-old.gif' />
+  <img src='/public/result/picture-old.gif' alt="Old image handling" />
 </p>
 
 <span style="font-weight:900">After optimization:</span>
 
 <p align="center">
-  <img src='/public/result/picture-new.gif' />
+  <img src='/public/result/picture-new.gif' alt="Optimized image handling" />
 </p>
 
-### 4️⃣ Plugin dependency optimization
+### 4️⃣ Plugin Dependency Optimization
 
-1. **Plugin registration scheme in source code**:
+1. **Original plugin registration scheme**:
 
 ```js
 plugins: [{ name: "chart" }, { name: "print" }];
 ```
 
 <p align="center">
-  <img src='/public/result/expendPlugins-source.png' />
+  <img src='/public/result/expendPlugins-source.png' alt="Original plugin registration" />
 </p>
 
-**This can lead to a problem where online links cannot be downloaded properly due to network issues, internal network restrictions, and other factors.**
+**This can cause issues where plugin dependencies cannot be downloaded properly due to network problems, intranet restrictions, and other factors.**
 
-2. **optimization plan**:
+2. **Optimized solution**:
 
 ```js
 plugins: [
@@ -284,10 +284,10 @@ plugins: [
 ```
 
 <p align="center">
-  <img src='/public/result/expendPlugins-new.png' />
+  <img src='/public/result/expendPlugins-new.png' alt="Optimized plugin registration" />
 </p>
 
-**The related plugin dependencies and loading schemes have been encapsulated, and are also compatible with online schemes:**
+**Related plugin dependencies and loading schemes are encapsulated, and online schemes are also compatible**:
 
 ```ts
 // Online solution
@@ -314,14 +314,13 @@ if (scripts[i].indexOf("http") === 0) {
 } else s[i].setAttribute("src", window.location.origin + "/" + scripts[i]);
 ```
 
-### 5️⃣ File Import And File Export
+### 5️⃣ File Import | File Export
 
 **File Import**
-
-<span style="font-weight:900">Support collaboration~</span>
+<span style="font-weight:900">Supports collaboration~</span>
 
 <p align="center">
-  <img src='/public/result/file-import.gif' />
+  <img src='/public/result/file-import.gif' alt="File import" />
 </p>
 <span style="font-weight:900">Configuration method:</span>
 
@@ -329,49 +328,49 @@ if (scripts[i].indexOf("http") === 0) {
 // 1. Configure import plugin
 const options = {
 	// ...other config
-	plugins: ["fileImport"],
+	plugins: [{ name: "fileImport" }],
 };
 
 luckysheet.create(options);
 ```
 
-<span style="font-weight:900">matters needing attention:</span>
+<span style="font-weight:900">Notes:</span>
 
-1. File import depends on the `luckyuexcel` plugin；
+1. File import depends on the `luckyexcel` plugin
 2. Therefore, some functions are limited by plugins. If you need to expand them, please implement them yourself!
-3. Please configure plugins correctly Use the import function after `fileImport`.
+3. Please correctly configure `plugins: [{ name: "fileImport" }]` before using the import function
 
 ---
 
 **File Export**
 
 <p align="center">
-  <img src='/public/result/file-export.gif' />
+  <img src='/public/result/file-export.gif' alt="File export" />
 </p>
-<span style="font-weight:900">Configuration method：</span>
+<span style="font-weight:900">Configuration method:</span>
 
 ```js
 // 1. Configure export plugin
 const options = {
 	// ...other config
-	plugins: ["fileExport"],
+	plugins: [{ name: "fileExport" }],
 };
 
 luckysheet.create(options);
 ```
 
-<span style="font-weight:900">matters needing attention:</span>
+<span style="font-weight:900">Notes:</span>
 
-1. File import depends on the `exceljs | file-saver` plugin；
+1. File export depends on the `exceljs | file-saver` plugins
 2. Therefore, some functions are limited by plugins. If you need to expand them, please implement them yourself!
-3. Please configure plugins correctly Use the import function after `fileExport`.
+3. Please correctly configure `plugins: [{ name: "fileExport" }]` before using the export function
 
-### 6️⃣ Customize Menu
+### 6️⃣ Custom Menu
 
-<span style="font-weight:900">Configuration:</span>
+<span style="font-weight:900">Configuration method:</span>
 
 <p align="center">
-  <img src='/public/result/menu.png' />
+  <img src='/public/result/menu.png' alt="Custom menu" />
 </p>
 
 ```ts
@@ -380,9 +379,9 @@ const options = {
    title: "Luckysheet",
    // ...other config
 
-   //  menuHandler config
+   // Pass menuHandler configuration item
    menuHandler:{
-       hideDefaultMenu: string[], // importFile | exportFile
+       hideDefaultMenu: string[], // Currently default menu items are importFile | exportFile
        customs: MenuHandlerCustomsItem[]
    }
 }
@@ -391,22 +390,22 @@ type MenuHandlerCustomsItem = {
   label: string
   value: string
   callback: () => void
-  order?: string // Menu sorting, the smaller one is on top, the default menu order=10 is on top of the default menu, it needs to be smaller than 10, and it will not be transferred. It will be placed below by default
+  order?: string // Menu sorting, smaller numbers are on top. Default menu order = 10. To place above default menu, use a number less than 10. If not provided, item will be placed below
   icon?: string
 } |
-// Partition line configuration object
+// Divider configuration object
 {
   value: 'divider'
 }
 ```
 
-**example**
+**Example**
 
 ```ts
 menuHandler: {
 	customs: [
 		{
-			label: "保存",
+			label: "Save",
 			value: "saveFile",
 			order: 1,
 		},
@@ -415,32 +414,32 @@ menuHandler: {
 }
 ```
 
-**Method for handling icon icons in custom menus**
+**How to handle icon icons in custom menus**
 
-1. Download iconfont resources and place them in the `source/src/assets` directory (download locally and unzip)
-2. Import the currently downloaded resource package into the same level directory `iconfont/iconfont.css`
+1. Download iconfont resources and place them in the `source/src/assets` directory (download and extract locally)
+2. Import the downloaded resource package in the same level directory `iconfont/iconfont.css`
 
 ```css
 @import url("../font_3944349_xxxxx/iconfont.css");
 ```
 
-3. Package and output to use iconfont icon normally
+3. Package and output to use iconfont icons normally
 
 ---
 
-**show Logo**
+**Show Logo**
 
 <p align="center">
-  <img src='/public/result/showlogo.png' />
+  <img src='/public/result/showlogo.png' alt="Show logo" />
 </p>
 
-**hide Logo**
+**Hide Logo**
 
 <p align="center">
-  <img src='/public/result/hidelogo.png' />
+  <img src='/public/result/hidelogo.png' alt="Hide logo" />
 </p>
 
-**Configuration:**
+**Configuration method**:
 
 ```js
 const options = {
@@ -449,14 +448,14 @@ const options = {
 };
 ```
 
-### 7️⃣ Custom request header
+### 7️⃣ Custom Request Headers
 
-Many people have reported that cookies, tokens, and other information should be added when requesting table data interfaces to verify user identity and permissions. This has been implemented and the specific configuration is as follows：
+Many people have reported that cookies, tokens, and other information should be added when requesting table data interfaces to implement user identity permission verification. This has been implemented with the following configuration:
 
 ```ts
 const options = {
 	// ... other config,
-	// 添加请求头
+	// Add request headers
 	requestHeaders: {
 		authorization: localForage.getItem("token"),
 		"x-requested-with": "XMLHttpRequest",
@@ -466,10 +465,10 @@ const options = {
 };
 ```
 
-**Specific implementation plan:`源码/src/core.js`**
+**Specific implementation: `源码/src/core.js`**
 
 ```ts
-// Modify the $post method to $ajax () to implement the function of adding request headers
+// Modify the $post method to $ajax() to implement adding request headers functionality
 $.ajax({
 	url: server.loadUrl,
 	type: "POST",
@@ -486,62 +485,62 @@ $.ajax({
 });
 ```
 
-### 8️⃣ Print
+### 8️⃣ Printing
 
-**print perview**
-
-<p align="center">
-  <img src='/public/result/print-preview.gif' />
-</p>
-
-**print current sheet**
+**Print Preview**
 
 <p align="center">
-  <img src='/public/result/printCurrentSheet.gif' />
+  <img src='/public/result/print-preview.gif' alt="Print preview" />
 </p>
 
-**print current range**
+**Print Current Sheet**
 
 <p align="center">
-  <img src='/public/result/printCurrentRange.gif' />
+  <img src='/public/result/printCurrentSheet.gif' alt="Print current sheet" />
 </p>
 
-**print page**
+**Print Current Range**
 
 <p align="center">
-  <img src='/public/result/printPage.gif' />
+  <img src='/public/result/printCurrentRange.gif' alt="Print current range" />
 </p>
 
-**print image**
+**Print Specific Page**
 
 <p align="center">
-  <img src='/public/result/printImage.gif' />
+  <img src='/public/result/printPage.gif' alt="Print specific page" />
 </p>
 
-**print chart**
+**Print Image**
 
 <p align="center">
-  <img src='/public/result/printChart.gif' />
+  <img src='/public/result/printImage.gif' alt="Print image" />
 </p>
 
-### 9️⃣ Cell image`beta`
-
-**Add cell image display function**
-
-1. Support inserting floating images;
-2. Support inserting cell images;
-3. Support the conversion between floating images and cell images;
-4. Support configuring default image display mode `config. imageMode='foot '|'cell'`;
-5. Support cell image preview;
-6. Support adaptive merging of cell images.
+**Print Chart**
 
 <p align="center">
-  <img src='/public/result/cellImage.gif' />
+  <img src='/public/result/printChart.gif' alt="Print chart" />
 </p>
 
-### 🔟 Other source code optimizations
+### 9️⃣ Cell Images `beta`
 
-1. [#Fix Fixed abnormal display of multi person collaboration prompt box](https://gitee.com/wfeng0/luckysheet-crdt/commit/af3c5837f8bec8a8cf4d261cbc8c9416d19902e1)
+**Added cell image display functionality**
+
+1. Support for inserting floating images
+2. Support for inserting cell images
+3. Support for converting between floating images and cell images
+4. Support for configuring default image display mode `config.imageMode = 'float' | 'cell'`
+5. Support for cell image preview
+6. Support for adaptive merging of cell images
+
+<p align="center">
+  <img src='/public/result/cellImage.gif' alt="Cell images" />
+</p>
+
+### 🔟 Other Source Code Optimizations
+
+1. [#Fix Fixed abnormal display of multi-person collaboration prompt box](https://gitee.com/wfeng0/luckysheet-crdt/commit/af3c5837f8bec8a8cf4d261cbc8c9416d19902e1)
 2. [#Fix Fixed the issue where the cursor cannot collaborate after refreshing with the same user ID](https://gitee.com/wfeng0/luckysheet-crdt/commit/5212b82c90595ff324c86db56e5ec25b88912d38)
 3. [#Fix Fix collaborative message transmission related to formula chain](https://gitee.com/wfeng0/luckysheet-crdt/commit/c121bcd389b4f8ecef00e3570cda9aea27e7333d)
 4. [#Feat Implementing annotation import and improving source code recognition of annotations](https://gitee.com/wfeng0/luckysheet-crdt/commit/72e52419ce0168c352b0ed78e182832426b7bdda)
@@ -549,28 +548,27 @@ $.ajax({
 6. [#Fix Emergency repair: When initializing the sheet and returning data celldata f='', the formula judgment is abnormal, causing double clicking to clear the data](https://gitee.com/wfeng0/luckysheet-crdt/commit/09147f0c76cbd0c94b2e358d8045282f7dba165d)
 7. [#Fix Fix the BUG of not updating collaboration after deleting columns](https://gitee.com/wfeng0/luckysheet-crdt/commit/232103c62df81e7cec3abd2b19e986d1ffad73d5)
 
-## Master-Vue Ready to use version out of the box
+## Master-Vue Out-of-the-Box Version
 
-This project, as a branch of 'luckysheet crdt', is attached to 'luckysheet crdt' and serves only as an example for the Vue version. It provides a complete user system (login, registration, information modification) and file system (create, modify, delete, collaborate, share...). The project screenshot is as follows:
+This project is a branch of `luckysheet-crdt`, attached to `luckysheet-crdt`, and serves only as a Vue version example. It provides a complete user system (login, registration, information modification) and file system (create, modify, delete, collaborate, share...). Project screenshots are as follows:
 
 <p align="center">
-  <img src='/public/result/master-vue-login.png' />
-  <img src='/public/result/master-vue-home.png' />
-  <img src='/public/result/master-vue-invite.png' />
-  <img src='/public/result/master-vue-userinfo.png' />
-  <img src='/public/result/master-vue-btns.png' />
+  <img src='/public/result/master-vue-login.png' alt="Master-Vue login" />
+  <img src='/public/result/master-vue-home.png' alt="Master-Vue home" />
+  <img src='/public/result/master-vue-invite.png' alt="Master-Vue invite" />
+  <img src='/public/result/master-vue-userinfo.png' alt="Master-Vue user info" />
+  <img src='/public/result/master-vue-btns.png' alt="Master-Vue buttons" />
 </p>
 
-## frequently asked questions
+## Frequently Asked Questions
 
-1. **When importing files, prompt `file format error`：**
+1. **When importing files, it prompts `File format error`**:
 
 ```ts
-At present, only xlsx format is supported.
-Please check if the file format is correct.
+Currently only xlsx format is supported. Please check if the file format is correct.
 ```
 
-2. **The page displays `Collaboration service unavailable, currently in normal mode`：**
+2. **Page shows `Collaboration service unavailable, currently in normal mode`**:
 
 ```ts
 try {
@@ -582,48 +580,51 @@ try {
 }
 catch (error) {}
 
-If and only if! When a fetch request fails, it will enter the catch block,
-At this time, it will prompt 'Collaboration service unavailable, currently in normal mode';
-Please check if the service is functioning properly. There are generally the following possibilities:
+If and only if the fetch request fails, it will enter the catch block,
+at which point it will prompt `Collaboration service unavailable, currently in normal mode`;
+Please check if the service is normal. Generally, there are the following possibilities:
+
 1. Service exception
 2. Database exception
-3. Abnormal database table structure
+3. Database table structure exception
 ```
 
-3. **Chaotic database data:**
+3. **Database data 混乱**:
 
 ```ts
-The only possible reason for this is that the application does not have a relevant delete statement,
-It's not that I don't write, but rather that everyone expands based on their actual business needs.
+The only possible reason for this is that the application does not have related delete statements,
+It's not that I don't write them, but that everyone should expand based on their actual business needs.
 The following steps can restore:
-1. Delete all data tables of luckyshev_crdt;
-2. Execute npm run db to synchronize database tables;
-3. Execute npm run server to start the service;
-The appeal operation will create a database table by oneself and synchronize the latest model structure,
-And create a gridkey demo worker books and worker sheets record;
-If and only if there are recorded scenes in these two tables, the luckySheet can be rendered;
-be careful! If there is no record in two tables, it may also cause the inability to collaborate (problem 2)
-be careful! If there are records in the workersheets table, but deleteFlag is true, it will also result in the inability to render luckysheets;
+1. Delete all luckysheet_crdt data tables
+2. Execute npm run db to synchronize database tables
+3. Execute npm run server to start the service
+
+The above operations will create database tables, synchronize the latest model structure,
+and create gridkey-demo records in workerbooks and workersheets tables;
+If and only if these two tables have records, luckysheet can be rendered;
+
+Note! If there are no records in the two tables, it may also cause inability to collaborate (Question 2)
+Note! If the workersheets table has records but deleteFlag is true, it will also cause inability to render luckysheet
 ```
 
-4. **Customize the creation of chart types**
-   At present, creating charts in vchart is a random 'pie chart' | 'line chart'. If you want to implement custom chart type transfer, you need to modify the chartmix related source code. The specific steps can be referred to as follows：
+4. **Custom chart type creation**
+   Currently, VChart creates charts randomly as `pie charts` or `line charts`. If you want to implement custom chart type passing, you need to modify the chartmix related source code. Specific steps can be referenced as follows:
 
 <p align="center">
-  <img src='/public/result/changeChartType.png' />
+  <img src='/public/result/changeChartType.png' alt="Change chart type" />
 </p>
 
 ```ts
-1. Download Source：https://gitee.com/mengshukeji/chartMix
-2. Modify the src/tiles/exportUtil.js create Chart method and add a chart type parameter;
+1. Download source: https://gitee.com/mengshukeji/chartMix
+2. Modify src/utils/exportUtil.js createChart method, add chart type parameter
 3. Repackage and place the file into the project
 ```
 
-## Open source contribution
+## Open Source Contribution
 
 1. Submit an [issue](https://gitee.com/wfeng0/luckysheet-crdt/issues/new)
 2. Fork this project and submit a PR
 3. Join the communication group:
  <p align="center">
-   <img src='/public/result/qq-group.png' />
+   <img src='/public/result/qq-group.png' alt="QQ Group" />
  </p>
