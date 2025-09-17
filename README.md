@@ -6,6 +6,8 @@
 
 [简体中文](./README-zh.md) | English
 
+`online`: [https://luckysheet-crdt.netlify.app/](https://luckysheet-crdt.netlify.app/)
+
 <p align="center">
   <img src='/public/result/result.gif' alt='Demonstration of collaborative editing' />
 </p>
