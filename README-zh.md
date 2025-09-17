@@ -6,6 +6,8 @@
 
 简体中文 | [English](./README.md)
 
+`在线体验地址`: [https://luckysheet-crdt.netlify.app/](https://luckysheet-crdt.netlify.app/)
+
 <p align="center">
   <img src='./public/result/result.gif' alt='协同编辑演示' />
 </p>
