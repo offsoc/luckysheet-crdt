@@ -485,6 +485,15 @@ $.ajax({
 
 ### 8️⃣ 打印相关
 
+**打印模糊优化**
+
+```js
+const options = {
+	/// ... other config,
+	printDevicePixelRatio: 4, // 数值越大，打印越清晰，但绘制时间更长，请平衡性能
+};
+```
+
 **打印预览视图**
 
 <p align="center">
