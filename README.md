@@ -486,6 +486,15 @@ $.ajax({
 
 ### 8️⃣ Printing
 
+**Printing blur optimization**
+
+```js
+const options = {
+	/// ... other config,
+	printDevicePixelRatio: 4, // The larger the value, the clearer the printing, but the longer the drawing time. Please balance the performance
+};
+```
+
 **Print Preview**
 
 <p align="center">
