@@ -177,32 +177,6 @@
 			}
 
 			/**
-			 * performanceTest 测试性能
-			 */
-			function performanceTest(options) {
-				// 获取当前的行列配置
-				const row = 10000;
-				const column = 60;
-				options.row = row;
-				options.column = column;
-				// { r: 0, c: 0, v: { v: "A", ct: { fa: "General", t: "n" }, m: "1" } },
-				for (let r = 0; r < row; r++) {
-					for (let c = 0; c < column; c++) {
-						const cell = {
-							r: r,
-							c: c,
-							v: {
-								v: `${r}${c}`,
-								ct: { fa: "General", t: "n" },
-								m: `${r}${c}`,
-							},
-						};
-						options.data[0].celldata.push(cell);
-					}
-				}
-			}
-
-			/**
 			 * @description 页面初始化相关工作
 			 */
 
@@ -232,7 +206,7 @@
 				const gridkey = "705abf334c946bf5545ce04f586eb42e";
 
 				// 7. 明确是否需要协同功能
-				const isCollabration = false;
+				const isCollabration = true;
 
 				// 8. 是否需要携带其他 request headers
 				const requestHeaders = {
@@ -250,11 +224,6 @@
 					username,
 					gridkey
 				);
-
-				/**
-				 * 性能优化测试
-				 */
-				// performanceTest(options);
 
 				// 10. 创建表格
 				luckysheet.create(options);
