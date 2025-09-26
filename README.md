@@ -486,6 +486,13 @@ $.ajax({
 
 ### 8️⃣ Printing
 
+**Add luckysheet print api**
+
+```js
+// type : number 1.print current sheet 2.Print the specified selection 3.Print specified worksheet
+luckysheet.print(type);
+```
+
 **Printing blur optimization**
 
 ```js
@@ -546,7 +553,27 @@ const options = {
   <img src='/public/result/cellImage.gif' alt="Cell images" />
 </p>
 
-### 🔟 Other Source Code Optimizations
+### 🔟 Customize Shortcuts
+
+**Configuration method**：
+
+```js
+const options = {
+	/// ... other config,
+	// Customize Shortcuts
+	customShortcutKeys: [
+		{
+			key: number,
+			ctrl?: boolean,
+			shift?: boolean,
+			alt?: boolean,
+			callback: (e) => {},
+		},
+	],
+};
+```
+
+### Other Source Code Optimizations
 
 1. [#Fix Fixed abnormal display of multi-person collaboration prompt box](https://gitee.com/wfeng0/luckysheet-crdt/commit/af3c5837f8bec8a8cf4d261cbc8c9416d19902e1)
 2. [#Fix Fixed the issue where the cursor cannot collaborate after refreshing with the same user ID](https://gitee.com/wfeng0/luckysheet-crdt/commit/5212b82c90595ff324c86db56e5ec25b88912d38)
