@@ -485,6 +485,13 @@ $.ajax({
 
 ### 8️⃣ 打印相关
 
+**新增打印 API**
+
+```js
+// type : number 1.打印当前工作表 2.打印指定选区 3.打印指定工作表
+luckysheet.print(type);
+```
+
 **打印模糊优化**
 
 ```js
@@ -545,7 +552,27 @@ const options = {
   <img src='./public/result/cellImage.gif' alt="单元格图片" />
 </p>
 
-### 🔟 其他源码优化
+### 🔟 自定义快捷键
+
+**配置方法**：
+
+```js
+const options = {
+	/// ... other config,
+	// 自定义快捷键
+	customShortcutKeys: [
+		{
+			key: number,
+			ctrl?: boolean,
+			shift?: boolean,
+			alt?: boolean,
+			callback: (e) => {},
+		},
+	],
+};
+```
+
+### 其他源码优化
 
 1. [#Fix 修复多人协同提示框显示异常](https://gitee.com/wfeng0/luckysheet-crdt/commit/af3c5837f8bec8a8cf4d261cbc8c9416d19902e1)
 2. [#Fix 修复同用户 ID 刷新后光标无法实现协同](https://gitee.com/wfeng0/luckysheet-crdt/commit/5212b82c90595ff324c86db56e5ec25b88912d38)

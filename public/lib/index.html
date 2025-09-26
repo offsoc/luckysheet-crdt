@@ -39,6 +39,24 @@
 				// 图片显示方式
 				imageMode: "cell", // 'cell' | 'float'
 
+				// 自定义快捷键
+				customShortcutKeys: [
+					{
+						key: 83,
+						ctrl: true,
+						callback: (e) => {
+							console.log("Ctrl S");
+						},
+					},
+					{
+						key: 80,
+						ctrl: true,
+						callback: (e) => {
+							console.log("Ctrl P");
+						},
+					},
+				],
+
 				// 自定义右键菜单
 				cellRightClickConfig: {
 					// copy: false,
