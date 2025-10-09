@@ -489,7 +489,7 @@ $.ajax({
 **Add luckysheet print api**
 
 ```js
-// type : number 1.print current sheet 2.Print the specified selection 3.Print specified worksheet
+// type : string 1.print current sheet 'sheet' 2.Print the specified selection 'areas' 3.Print specified worksheet 'pages'
 luckysheet.print(type);
 ```
 
@@ -501,6 +501,12 @@ const options = {
 	printDevicePixelRatio: 4, // The larger the value, the clearer the printing, but the longer the drawing time. Please balance the performance
 };
 ```
+
+**Print Grid Line**
+
+<p align="center">
+  <img src='./public/result/print-grid-line.gif' alt="print grid line" />
+</p>
 
 **Print Preview**
 

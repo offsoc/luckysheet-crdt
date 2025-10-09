@@ -488,7 +488,7 @@ $.ajax({
 **新增打印 API**
 
 ```js
-// type : number 1.打印当前工作表 2.打印指定选区 3.打印指定工作表
+// type : string 1.打印当前工作表 sheet 2.打印执行选区 areas 3.打印指定工作表 pages
 luckysheet.print(type);
 ```
 
@@ -500,6 +500,12 @@ const options = {
 	printDevicePixelRatio: 4, // 数值越大，打印越清晰，但绘制时间更长，请平衡性能
 };
 ```
+
+**打印支持取消网格线**
+
+<p align="center">
+  <img src='./public/result/print-grid-line.gif' alt="网格线" />
+</p>
 
 **打印预览视图**
 
