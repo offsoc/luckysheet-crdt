@@ -25,6 +25,10 @@
 -   `Gitee`: [https://gitee.com/wfeng0/luckysheet-crdt](https://gitee.com/wfeng0/luckysheet-crdt)
 -   `GitHub`: [https://github.com/pushu-wf/luckysheet-crdt](https://github.com/pushu-wf/luckysheet-crdt)
 
+**⚠️ Tips**
+
+The latest features are always updated first on `Gitee`, and are updated in the order of `Gitee [master alpha]`, `Gitee [master]`, and `Github [master]`.
+
 ## Overview
 
 1. This project is based on [Luckysheet](https://github.com/mengshukeji/Luckysheet) source code. **Please follow the original author's open source agreement** and do not remove or modify the copyright notice in the source code header.

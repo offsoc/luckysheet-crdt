@@ -25,6 +25,10 @@
 -   `Gitee`: [https://gitee.com/wfeng0/luckysheet-crdt](https://gitee.com/wfeng0/luckysheet-crdt)
 -   `GitHub`: [https://github.com/pushu-wf/luckysheet-crdt](https://github.com/pushu-wf/luckysheet-crdt)
 
+**⚠️ 温馨提示**
+
+最新的特性始终在`Gitee`上先更新，并且以 `Gitee [master-alpha]`、`Gitee [master]`、`Github [master]`的顺序更新。
+
 ## 项目说明
 
 1. 本项目基于 [Luckysheet](https://github.com/mengshukeji/Luckysheet) 源码修改，**请遵循原作者开源协议**，同时，**请不要删除或修改源码头部版权声明**
