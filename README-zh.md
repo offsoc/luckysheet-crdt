@@ -222,18 +222,10 @@ export const WS_SERVER_URL = "ws://127.0.0.1:9000";
   <img src='./public/result/vchart-update-data-crdt.gif' alt="VChart 数据联动" />
 </p>
 
-### 3️⃣ 图片移动性能优化
-
-<span style="font-weight:900">原效果：</span>
+### 3️⃣ 新增左斜线|右斜线 边框类型
 
 <p align="center">
-  <img src='./public/result/picture-old.gif' alt="旧版图片处理" />
-</p>
-
-<span style="font-weight:900">优化后：（调整图片设置打开方式）</span>
-
-<p align="center">
-  <img src='./public/result/picture-new.gif' alt="新版图片处理" />
+  <img src='./public/result/slash-demo.png' alt="新增左斜线|右斜线 边框类型" />
 </p>
 
 ### 4️⃣ 插件依赖优化

@@ -223,18 +223,10 @@ export const WS_SERVER_URL = "ws://127.0.0.1:9000";
   <img src='/public/result/vchart-update-data-crdt.gif' alt="VChart data linkage" />
 </p>
 
-### 3️⃣ Image Performance Optimization
-
-<span style="font-weight:900">Original effect:</span>
+### 3️⃣ Add left diagonal line | right diagonal line border type
 
 <p align="center">
-  <img src='/public/result/picture-old.gif' alt="Old image handling" />
-</p>
-
-<span style="font-weight:900">After optimization:</span>
-
-<p align="center">
-  <img src='/public/result/picture-new.gif' alt="Optimized image handling" />
+  <img src='./public/result/slash-demo.png' alt="Slash border type" />
 </p>
 
 ### 4️⃣ Plugin Dependency Optimization
