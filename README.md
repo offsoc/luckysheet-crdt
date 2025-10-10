@@ -223,18 +223,10 @@ export const WS_SERVER_URL = "ws://127.0.0.1:9000";
   <img src='/public/result/vchart-update-data-crdt.gif' alt="VChart data linkage" />
 </p>
 
-### 3️⃣ Image Performance Optimization
-
-<span style="font-weight:900">Original effect:</span>
+### 3️⃣ Add left diagonal line | right diagonal line border type
 
 <p align="center">
-  <img src='/public/result/picture-old.gif' alt="Old image handling" />
-</p>
-
-<span style="font-weight:900">After optimization:</span>
-
-<p align="center">
-  <img src='/public/result/picture-new.gif' alt="Optimized image handling" />
+  <img src='./public/result/slash-demo.png' alt="Slash border type" />
 </p>
 
 ### 4️⃣ Plugin Dependency Optimization
@@ -489,7 +481,7 @@ $.ajax({
 **Add luckysheet print api**
 
 ```js
-// type : number 1.print current sheet 2.Print the specified selection 3.Print specified worksheet
+// type : string 1.print current sheet 'sheet' 2.Print the specified selection 'areas' 3.Print specified worksheet 'pages'
 luckysheet.print(type);
 ```
 
@@ -501,6 +493,12 @@ const options = {
 	printDevicePixelRatio: 4, // The larger the value, the clearer the printing, but the longer the drawing time. Please balance the performance
 };
 ```
+
+**Print Grid Line**
+
+<p align="center">
+  <img src='./public/result/print-grid-line.gif' alt="print grid line" />
+</p>
 
 **Print Preview**
 
