@@ -484,7 +484,8 @@ $.ajax({
 **新增打印 API**
 
 ```js
-// type : string 1.打印当前工作表 sheet 2.打印执行选区 areas 3.打印指定工作表 pages
+// "sheet": 打印当前工作表  "areas": 打印执行选区  "pages": 打印指定页码
+// type : "sheet" | "areas" | "pages"
 luckysheet.print(type);
 ```
 

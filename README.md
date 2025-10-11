@@ -485,7 +485,8 @@ $.ajax({
 **Add luckysheet print api**
 
 ```js
-// type : string 1.print current sheet 'sheet' 2.Print the specified selection 'areas' 3.Print specified worksheet 'pages'
+// "sheet": print current sheet  "areas": Print the specified selection  "pages": Print specified pages
+// type : "sheet" | "areas" | "pages"
 luckysheet.print(type);
 ```
 
