@@ -584,6 +584,7 @@ const options = {
 5. [#Feat 优化 chartmix/vchart 数据联动及实现 server 数据更新存储记录](https://gitee.com/wfeng0/luckysheet-crdt/commit/3f89fff92722ab1631c6c5976b307eb37f83f1d1)
 6. [#Fix 紧急修复初始化 sheet 时，返回数据 celldata f ='' 时， formula 判断异常，导致双击清空数据](https://gitee.com/wfeng0/luckysheet-crdt/commit/09147f0c76cbd0c94b2e358d8045282f7dba165d)
 7. [#Fix 修复删除列后撤销协同不更新 BUG](https://gitee.com/wfeng0/luckysheet-crdt/commit/232103c62df81e7cec3abd2b19e986d1ffad73d5)
+8. [#Fix 修复 inlineStr 富文本数据复制粘贴异常 BUG](https://gitee.com/wfeng0/luckysheet-crdt/commit/33274ef5e1a7462b4c4670bbd700d1f1dcba53fa)
 
 ## Master-Vue 开箱即用版
 
