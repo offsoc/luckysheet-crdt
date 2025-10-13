@@ -487,7 +487,7 @@ $.ajax({
 ```js
 // "sheet": print current sheet  "areas": Print the specified selection  "pages": Print specified pages
 // type : "sheet" | "areas" | "pages"
-luckysheet.print(type);
+luckysheet.print(type, neetToPreview); // If no preview is required, the second parameter is false
 ```
 
 **Printing blur optimization**
@@ -585,6 +585,7 @@ const options = {
 5. [#Feat Optimize the data linkage between chartmix/vchart and implement server data update and storage records](https://gitee.com/wfeng0/luckysheet-crdt/commit/3f89fff92722ab1631c6c5976b307eb37f83f1d1)
 6. [#Fix Emergency repair: When initializing the sheet and returning data celldata f='', the formula judgment is abnormal, causing double clicking to clear the data](https://gitee.com/wfeng0/luckysheet-crdt/commit/09147f0c76cbd0c94b2e358d8045282f7dba165d)
 7. [#Fix Fix the BUG of not updating collaboration after deleting columns](https://gitee.com/wfeng0/luckysheet-crdt/commit/232103c62df81e7cec3abd2b19e986d1ffad73d5)
+8. [#Fix Fix inlineStr rich text data copy and paste exception BUG](https://gitee.com/wfeng0/luckysheet-crdt/commit/33274ef5e1a7462b4c4670bbd700d1f1dcba53fa)
 
 ## Master-Vue Out-of-the-Box Version
 
