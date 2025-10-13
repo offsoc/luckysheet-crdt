@@ -487,7 +487,7 @@ $.ajax({
 ```js
 // "sheet": print current sheet  "areas": Print the specified selection  "pages": Print specified pages
 // type : "sheet" | "areas" | "pages"
-luckysheet.print(type);
+luckysheet.print(type, neetToPreview); // If no preview is required, the second parameter is false
 ```
 
 **Printing blur optimization**

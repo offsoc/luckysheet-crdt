@@ -486,7 +486,7 @@ $.ajax({
 ```js
 // "sheet": 打印当前工作表  "areas": 打印执行选区  "pages": 打印指定页码
 // type : "sheet" | "areas" | "pages"
-luckysheet.print(type);
+luckysheet.print(type, neetToPreview); // 如果不需要预览，则第二个参数为false
 ```
 
 **打印模糊优化**
