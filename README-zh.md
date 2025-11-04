@@ -123,6 +123,45 @@ npm run db
 
 ## 项目部署
 
+### 方式一：Docker 部署（推荐）🐳
+
+**使用 Docker Compose 一键部署，无需手动配置环境和数据库！**
+
+#### 1. 前提条件
+
+- 已安装 Docker 20.10+
+- 已安装 Docker Compose 2.0+
+
+#### 2. 快速开始
+
+**手动部署:**
+
+```bash
+# 1. 复制环境变量配置文件
+cp env.example .env
+
+# 2. 根据需要修改 .env 文件中的配置（可选）
+# vim .env
+
+# 3. 启动所有服务
+docker-compose up -d
+
+# 4. 查看服务状态
+docker-compose ps
+
+# 5. 查看日志
+docker-compose logs -f
+```
+
+#### 3. 访问应用
+
+- **应用地址**: http://localhost:9000
+- **数据库地址**: localhost:3306
+
+---
+
+### 方式二：传统部署
+
 **温馨提示：下列所有命令均在项目根目录下执行 /LUCKYSHEET-CRDT/**
 
 1. **注意！** 请修改部署的配置文件：`src/config/index.ts`：
