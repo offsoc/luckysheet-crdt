@@ -94,11 +94,11 @@ npm run dep-npm | npm run dep-pnpm
 ```ts
 // server/src/Config/index.ts
 export const SQL_CONFIG = {
-	port: 3306,
-	host: "127.0.0.1", // localhost or 127.0.0.1
-	database: "luckysheet_crdt",
-	user: "root",
-	password: "root",
+    port: 3306,
+    host: "127.0.0.1", // localhost or 127.0.0.1
+    database: "luckysheet_crdt",
+    user: "root",
+    password: "root",
 };
 ```
 
@@ -122,6 +122,45 @@ npm run db
 6. Open URL: `http://localhost:5000` | `http://localhost:9000` to experience collaborative functionality.
 
 ## Deployment
+
+### Method 1: Docker Deployment (Recommended)🐳
+
+**Deploy with one click using Docker Compose, no manual environment or database configuration required!**
+
+#### 1. Prerequisites
+
+-   Docker 20.10 has been installed+
+-   Docker Compose 2.0 has been installed+
+
+#### 2. Quick Start
+
+**manual deployment:**
+
+```bash
+# 1. Copy environment variable configuration file
+cp env.example .env
+
+# 2. Modify the configuration in the. env file as needed (optional)
+# vim .env
+
+# 3. Start all services
+docker-compose up -d
+
+# 4. View service status
+docker-compose ps
+
+# 5. View logs
+docker-compose logs -f
+```
+
+#### 3. Accessing applications
+
+-   **Application**: http://localhost:9000
+-   **Database**: localhost:3306
+
+---
+
+### Method 2: Traditional Deployment
 
 **Note: All the following commands are executed in the project root directory `/LUCKYSHEET-CRDT/`**
 
@@ -173,8 +212,8 @@ export const SERVER_PORT = 9000;
 ```js
 // 2️⃣ Database service port configuration: server/src/Config/index.ts
 export const SQL_CONFIG = {
-	port: 3306,
-	// ... other config
+    port: 3306,
+    // ... other config
 };
 ```
 
@@ -300,12 +339,12 @@ plugins: [
 // The request principle in the source code is as follows:
 // If it is an HTTP online address, request directly
 if (url.indexOf("http") == 0) {
-	link.setAttribute("href", url);
+    link.setAttribute("href", url);
 } else link.setAttribute("href", window.location.origin + "/" + url);
 
 // If it is an HTTP online address, request directly
 if (scripts[i].indexOf("http") === 0) {
-	s[i].setAttribute("src", scripts[i]);
+    s[i].setAttribute("src", scripts[i]);
 } else s[i].setAttribute("src", window.location.origin + "/" + scripts[i]);
 ```
 
@@ -322,8 +361,8 @@ if (scripts[i].indexOf("http") === 0) {
 ```js
 // 1. Configure import plugin
 const options = {
-	// ...other config
-	plugins: [{ name: "fileImport" }],
+    // ...other config
+    plugins: [{ name: "fileImport" }],
 };
 
 luckysheet.create(options);
@@ -347,8 +386,8 @@ luckysheet.create(options);
 ```js
 // 1. Configure export plugin
 const options = {
-	// ...other config
-	plugins: [{ name: "fileExport" }],
+    // ...other config
+    plugins: [{ name: "fileExport" }],
 };
 
 luckysheet.create(options);
@@ -398,14 +437,14 @@ type MenuHandlerCustomsItem = {
 
 ```ts
 menuHandler: {
-	customs: [
-		{
-			label: "Save",
-			value: "saveFile",
-			order: 1,
-		},
-		{ value: "divider", order: 2 },
-	];
+    customs: [
+        {
+            label: "Save",
+            value: "saveFile",
+            order: 1,
+        },
+        { value: "divider", order: 2 },
+    ];
 }
 ```
 
@@ -438,8 +477,8 @@ menuHandler: {
 
 ```js
 const options = {
-	showlogo: false,
-	/// ...other config
+    showlogo: false,
+    /// ...other config
 };
 ```
 
@@ -449,14 +488,14 @@ Many people have reported that cookies, tokens, and other information should be 
 
 ```ts
 const options = {
-	// ... other config,
-	// Add request headers
-	requestHeaders: {
-		authorization: localForage.getItem("token"),
-		"x-requested-with": "XMLHttpRequest",
-		"custom-name": "custom-value",
-		// ... other headers
-	},
+    // ... other config,
+    // Add request headers
+    requestHeaders: {
+        authorization: localForage.getItem("token"),
+        "x-requested-with": "XMLHttpRequest",
+        "custom-name": "custom-value",
+        // ... other headers
+    },
 };
 ```
 
@@ -465,18 +504,18 @@ const options = {
 ```ts
 // Modify the $post method to $ajax() to implement adding request headers functionality
 $.ajax({
-	url: server.loadUrl,
-	type: "POST",
-	data: { gridKey: server.gridKey },
-	beforeSend(xhr) {
-		if (!extendsetting.requestHeaders) return;
-		for (let key in extendsetting.requestHeaders) {
-			xhr.setRequestHeader(key, extendsetting.requestHeaders[key]);
-		}
-	},
-	timeout: 15000,
-	success: function (d) {},
-	error: function (error) {},
+    url: server.loadUrl,
+    type: "POST",
+    data: { gridKey: server.gridKey },
+    beforeSend(xhr) {
+        if (!extendsetting.requestHeaders) return;
+        for (let key in extendsetting.requestHeaders) {
+            xhr.setRequestHeader(key, extendsetting.requestHeaders[key]);
+        }
+    },
+    timeout: 15000,
+    success: function (d) {},
+    error: function (error) {},
 });
 ```
 
@@ -494,8 +533,8 @@ luckysheet.print(type, neetToPreview); // If no preview is required, the second 
 
 ```js
 const options = {
-	/// ... other config,
-	printDevicePixelRatio: 4, // The larger the value, the clearer the printing, but the longer the drawing time. Please balance the performance
+    /// ... other config,
+    printDevicePixelRatio: 4, // The larger the value, the clearer the printing, but the longer the drawing time. Please balance the performance
 };
 ```
 
