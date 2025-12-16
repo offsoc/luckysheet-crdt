@@ -13,7 +13,7 @@ export class ImageModel extends Model {
 
 	declare image_key: string; // 图片唯一标识
 
-	declare in_cell?: string; // 是否在单元格内
+	declare in_cell?: boolean; // 是否为单元格图片
 
 	declare image_originWidth: number; // 原始宽度
 	declare image_originHeight: number; // 原始高度
@@ -67,7 +67,7 @@ export class ImageModel extends Model {
 					comment: "图片地址",
 				},
 				in_cell: {
-					type: DataTypes.STRING,
+					type: DataTypes.BOOLEAN,
 					allowNull: false,
 					comment: "单元格图片标识",
 				},

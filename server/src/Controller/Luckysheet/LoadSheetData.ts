@@ -316,7 +316,7 @@ async function parseImages(worker_sheet_id: string, currentSheetData: WorkerShee
 				type: data.image_type, //1移动并调整单元格大小 2移动并且不调整单元格的大小 3不要移动单元格并调整其大小
 				src: data.image_src, //图片url
 
-				inCell: data.in_cell || "", // 所在单元格位置
+				inCell: data.in_cell || false, // 所在单元格位置
 				originWidth: data.image_originWidth,
 				originHeight: data.image_originHeight,
 				default: {
