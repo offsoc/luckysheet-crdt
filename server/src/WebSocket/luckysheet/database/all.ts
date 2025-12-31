@@ -92,7 +92,7 @@ export async function all(data: string) {
 					worker_sheet_id: i,
 					image_type: value.type, // type 1移动并调整单元格大小 2移动并且不调整单元格的大小 3不要移动单元格并调整其大小
 					image_src: value.src, // 图片地址
-					in_cell: value.inCell || "", // 所在单元格位置
+					in_cell: value.inCell || false, // 所在单元格位置
 					image_originWidth: value.originWidth, // 原始宽度
 					image_originHeight: value.originHeight, // 原始高度
 					image_default_width: value.default.width, // 默认宽度

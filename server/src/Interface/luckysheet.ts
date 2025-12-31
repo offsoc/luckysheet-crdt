@@ -188,7 +188,7 @@ type ImagesType = {
 	src: string;
 	originWidth: number;
 	originHeight: number;
-	inCell: string;
+	inCell: boolean;
 	default: {
 		width: number;
 		height: number;
